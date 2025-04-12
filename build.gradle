@@ -1,0 +1,22 @@
+
+plugins {
+    id 'fabric-loom' version '0.12.5'
+    id 'maven-publish'
+}
+
+group = 'com.kakashi'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:1.17.1"
+    mappings "net.fabricmc:yarn:1.17.1+build.13:v2"
+    modImplementation "net.fabricmc:fabric-loader:0.11.6"
+}
+
+loom {
+    splitEnvironmentSourceSets()
+}
